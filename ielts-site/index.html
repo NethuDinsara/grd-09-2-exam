@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zen Student | IELTS Band 9 Master Blueprint</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandNavy: '#0F2027',
+            brandBlue: '#203A43',
+            brandAccent: '#2C5364',
+            goldAccent: '#D4AF37'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-brandNavy text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <i class="fa-solid fa-graduation-cap text-goldAccent text-2xl"></i>
+          <span class="font-bold text-xl tracking-wider">ZEN STUDENT</span>
+        </div>
+        <div class="hidden md:flex space-x-6 text-sm font-semibold">
+          <a href="#reading" class="hover:text-goldAccent transition">Reading Strategy</a>
+          <a href="#listening" class="hover:text-goldAccent transition">Listening Strategy</a>
+          <a href="#writing" class="hover:text-goldAccent transition">Writing (GT & Academic)</a>
+          <a href="#speaking" class="hover:text-goldAccent transition">Speaking Strategy</a>
+        </div>
+        <div class="text-xs text-right hidden sm:block">
+          <div><i class="fa-solid fa-envelope"></i> zenstudentlk@gmail.com</div>
+          <div><i class="fa-brands fa-whatsapp"></i> +94717626701</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="bg-gradient-to-r from-brandNavy via-brandBlue to-brandAccent text-white py-12 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <span class="bg-goldAccent text-brandNavy font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wide">Band 9 Master Blueprint</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold mt-4 mb-2">Comprehensive IELTS Exam Strategy</h1>
+      <p class="text-gray-300 text-sm md:text-base mb-6">Your Future Begins Here. Master every question type, module framework, and systemic technique.</p>
+      
+      <!-- Quick Filter Navigation -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs md:text-sm font-semibold">
+        <button onclick="scrollToSection('reading')" class="bg-white/10 hover:bg-goldAccent hover:text-brandNavy px-4 py-2 rounded-lg border border-white/20 transition"><i class="fa-solid fa-book-open mr-1"></i> Reading (12 Types)</button>
+        <button onclick="scrollToSection('listening')" class="bg-white/10 hover:bg-goldAccent hover:text-brandNavy px-4 py-2 rounded-lg border border-white/20 transition"><i class="fa-solid fa-headphones mr-1"></i> Listening</button>
+        <button onclick="scrollToSection('writing')" class="bg-white/10 hover:bg-goldAccent hover:text-brandNavy px-4 py-2 rounded-lg border border-white/20 transition"><i class="fa-solid fa-pen-nib mr-1"></i> Writing (Task 1 & 2)</button>
+        <button onclick="scrollToSection('speaking')" class="bg-white/10 hover:bg-goldAccent hover:text-brandNavy px-4 py-2 rounded-lg border border-white/20 transition"><i class="fa-solid fa-comments mr-1"></i> Speaking (22 Topics)</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- READING SECTION -->
+    <section id="reading" class="scroll-mt-20">
+      <div class="border-l-4 border-brandBlue pl-4 mb-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-brandNavy"><i class="fa-solid fa-book-open mr-2 text-brandBlue"></i>Reading Section Strategies</h2>
+        <p class="text-gray-600 text-sm">40 Questions | 60 Minutes | Test of <b>Scanning</b> & <b>Comprehension</b></p>
+      </div>
+
+      <!-- Core Rule Box -->
+      <div class="bg-amber-50 border-l-4 border-goldAccent p-4 rounded-r-lg mb-8 shadow-sm">
+        <h4 class="font-bold text-brandNavy flex items-center mb-1"><i class="fa-solid fa-lightbulb text-goldAccent mr-2"></i> Golden Rule for In-Order Questions</h4>
+        <p class="text-xs md:text-sm text-gray-700">Questions generally follow passage order. Always compare the <b>Question to the Passage</b>, NOT the passage to the question. Heavily watch for synonym language and sentence joiners (e.g., semicolons `;` or compound clauses).</p>
+      </div>
+
+      <!-- Reading Question Types Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="reading-cards">
+        <!-- Cards injected by JS for maximum clarity -->
+      </div>
+    </section>
+
+    <!-- LISTENING SECTION -->
+    <section id="listening" class="scroll-mt-20 bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
+      <div class="border-l-4 border-brandBlue pl-4 mb-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-brandNavy"><i class="fa-solid fa-headphones mr-2 text-brandBlue"></i>Listening Section Strategies</h2>
+        <p class="text-gray-600 text-sm">40 Questions | 30–40 Minutes | 4 Audio Sections</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+          <h3 class="font-bold text-brandNavy mb-2"><i class="fa-solid fa-bullseye text-brandBlue mr-1"></i> Active Prediction</h3>
+          <p class="text-xs text-gray-600">During preparation time, read ahead. Predict word types (noun, verb, adjective, date, distance) for every blank before the recording starts.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+          <h3 class="font-bold text-brandNavy mb-2"><i class="fa-solid fa-map-location-dot text-brandBlue mr-1"></i> Map Completion</h3>
+          <p class="text-xs text-gray-600">Move your pencil along the map trace line. Focus on direction terms (<i>opposite, adjacent, turn left</i>) and starting reference landmarks (e.g., entrance, reception).</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+          <h3 class="font-bold text-brandNavy mb-2"><i class="fa-solid fa-shield-cat text-brandBlue mr-1"></i> Distractors & Singulars</h3>
+          <p class="text-xs text-gray-600">Watch for correction loops ("<i>3 PM... oh wait, 4 PM</i>"). Ensure 100% accuracy on singular/plural nouns (-s) and exact word-count limits.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WRITING SECTION -->
+    <section id="writing" class="scroll-mt-20">
+      <div class="border-l-4 border-brandBlue pl-4 mb-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-brandNavy"><i class="fa-solid fa-pen-nib mr-2 text-brandBlue"></i>Writing Section Framework</h2>
+        <p class="text-gray-600 text-sm">2 Tasks | 60 Minutes total</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Task 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-bold text-brandNavy">Task 1 (20 Mins | 150+ Words)</h3>
+              <span class="text-xs bg-blue-100 text-brandNavy font-semibold px-2 py-1 rounded">Weight: 1/3</span>
+            </div>
+            
+            <!-- GT vs Academic Tabs -->
+            <div class="mb-4 border-b border-gray-200">
+              <ul class="flex text-sm font-semibold -mb-px">
+                <li class="mr-4">
+                  <button onclick="toggleTask1('gt')" id="btn-gt" class="py-2 border-b-2 border-brandBlue text-brandBlue">General Training (Letters)</button>
+                </li>
+                <li>
+                  <button onclick="toggleTask1('ac')" id="btn-ac" class="py-2 border-b-2 border-transparent text-gray-500 hover:text-brandNavy">Academic (Reports)</button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- GT Content -->
+            <div id="task1-gt" class="text-xs text-gray-700 space-y-3">
+              <p><b>Purpose:</b> Respond to a scenario (Complaint, Invitation, Advice, Application, Request) while matching the appropriate tone.</p>
+              <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                <b>Tone Matrix:</b>
+                <ul class="list-disc ml-4 mt-1 space-y-1">
+                  <li><b>Formal:</b> Unregistered recipient (Bank, Manager). Use "<i>Dear Sir/Madam ... Yours faithfully</i>". Avoid contractions.</li>
+                  <li><b>Semi-Formal:</b> Known figure (Landlord, Teacher). Use "<i>Dear Mr. Smith ... Yours sincerely</i>".</li>
+                  <li><b>Informal:</b> Close friends/family. Use "<i>Dear Alex ... Best wishes</i>". Natural contractions allowed.</li>
+                </ul>
+              </div>
+              <p><b>Rule:</b> Systematically expand each of the 3 bullet points provided in the prompt.</p>
+            </div>
+
+            <!-- Academic Content -->
+            <div id="task1-ac" class="text-xs text-gray-700 space-y-3 hidden">
+              <p><b>Supported Visual Types:</b> Bar charts, Pie charts, Line graphs, Maps, Process diagrams, Tables, Multiple graphs.</p>
+              <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                <b>Structure Blueprint:</b>
+                <ol class="list-decimal ml-4 mt-1 space-y-1">
+                  <li><b>Introduction:</b> Paraphrase the prompt graphics.</li>
+                  <li><b>Overview Paragraph:</b> Highlight major trends, high/low points, or key transformations without detailed data.</li>
+                  <li><b>2 Body Paragraphs:</b> Group key data logically, providing specific stats and accurate comparisons.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Task 2 Essay -->
+        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-bold text-brandNavy">Task 2 Essay (40 Mins | 250+ Words)</h3>
+              <span class="text-xs bg-amber-100 text-amber-800 font-semibold px-2 py-1 rounded">Weight: 2/3</span>
+            </div>
+            
+            <p class="text-xs text-gray-600 mb-3">Requires a clear stance, cohesive structure (PEEL), and accurate academic vocabulary.</p>
+
+            <!-- Accordion for Essay Types & Topics -->
+            <div class="space-y-2 text-xs">
+              <details class="bg-gray-50 p-3 rounded border border-gray-200">
+                <summary class="font-bold text-brandNavy cursor-pointer">9 Essay Question Types</summary>
+                <ol class="list-decimal ml-4 mt-2 grid grid-cols-1 md:grid-cols-2 gap-1 text-gray-700">
+                  <li>Agree / Disagree</li>
+                  <li>To what extent Agree/Disagree</li>
+                  <li>Advantages & Disadvantages</li>
+                  <li>Problem / Solution</li>
+                  <li>Cause / Solution</li>
+                  <li>Cause / Effect</li>
+                  <li>Discuss both views</li>
+                  <li>Give opinion & support</li>
+                  <li>Double-question essays</li>
+                </ol>
+              </details>
+
+              <details class="bg-gray-50 p-3 rounded border border-gray-200">
+                <summary class="font-bold text-brandNavy cursor-pointer">29 Master Essay Topics</summary>
+                <div class="mt-2 grid grid-cols-3 gap-1 text-[11px] text-gray-600">
+                  <span>1. Education</span><span>2. Environment</span><span>3. Science/Tech</span>
+                  <span>4. Media</span><span>5. Advertising</span><span>6. Children</span>
+                  <span>7. Young People</span><span>8. Old People</span><span>9. Building</span>
+                  <span>10. Culture</span><span>11. Drugs</span><span>12. Ethical Issues</span>
+                  <span>13. Family</span><span>14. Foreign Language</span><span>15. Health</span>
+                  <span>16. Lifestyle</span><span>17. Research</span><span>18. Sport</span>
+                  <span>19. Social Issues</span><span>20. Computers</span><span>21. Country</span>
+                  <span>22. Economic</span><span>23. Government</span><span>24. Job</span>
+                  <span>25. Leisure</span><span>26. Traffic</span><span>27. Travel</span>
+                  <span>28. Value</span><span>29. Hometown</span>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPEAKING SECTION -->
+    <section id="speaking" class="scroll-mt-20">
+      <div class="border-l-4 border-brandBlue pl-4 mb-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-brandNavy"><i class="fa-solid fa-comments mr-2 text-brandBlue"></i>Speaking Section Framework</h2>
+        <p class="text-gray-600 text-sm">10–20 Minutes | 3 Parts | Evaluates Fluency, Lexical Resource, Grammar, & Pronunciation</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 space-y-6">
+        <!-- 3 Parts Breakdown -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <span class="font-bold text-brandBlue text-sm block mb-1">Part 1: Intro & Interview</span>
+            <p class="text-gray-600">4-5 minutes. Give immediate, direct answers followed by 1-2 supporting details. Avoid one-word answers.</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <span class="font-bold text-brandBlue text-sm block mb-1">Part 2: Individual Long Turn</span>
+            <p class="text-gray-600">3-4 minutes (1 min prep + 2 min speak). Use prep time to outline a narrative arc. Speak continuously until stopped.</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <span class="font-bold text-brandBlue text-sm block mb-1">Part 3: 2-Way Discussion</span>
+            <p class="text-gray-600">4-5 minutes. Abstract, broad societal-level analysis. Use high-level discourse markers and balance perspectives.</p>
+          </div>
+        </div>
+
+        <!-- 22 Core Topics Tag Cloud -->
+        <div>
+          <h4 class="font-bold text-brandNavy text-sm mb-3">22 Core Speaking Topics:</h4>
+          <div class="flex flex-wrap gap-2 text-xs" id="speaking-tags">
+            <!-- Tags rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brandNavy text-white py-8 border-t border-brandBlue text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <p class="font-bold text-sm text-goldAccent">ZEN STUDENT - Your Future Begins Here</p>
+      <p>Contact: zenstudentlk@gmail.com | WhatsApp: +94717626701</p>
+      <p class="text-gray-400">© 2026 Zen Student IELTS Preparation. Built for Band 9 Candidates.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Strategy Data and Render Logic -->
+  <script>
+    // Reading Data from Documents
+    const readingStrategies = [
+      { title: "1. Sentence Completion", order: "IN ORDER", steps: ["Spot easiest question first.", "Underline keywords.", "Scan passage to match language before/after blank.", "Watch for synonym language."] },
+      { title: "2. Short-Answer Questions", order: "IN ORDER", steps: ["Identify easiest questions first.", "Underline keywords.", "Scan to find matching line in text.", "Write exact answer using allowed word count."] },
+      { title: "3. Flow Chart / Diagram / Table", order: "IN ORDER", steps: ["Identify easiest gaps to fill.", "Underline keywords.", "Match language surrounding the blank space.", "Fill in exact missing words."] },
+      { title: "4. Multiple Choice", order: "IN ORDER", steps: ["Underline key terms in stem.", "Scan to match matching passage sentences (can span 2 sentences).", "Compare options against passage logic.", "Select matching answer."] },
+      { title: "5. True / False / Not Given", order: "IN ORDER", steps: ["True = ALL essential info matches using synonyms.", "False = Essential language is changed, made opposite, or contradicted.", "Not Given = Info is missing or unproven."] },
+      { title: "6. Summary Completion", order: "MOSTLY IN ORDER", steps: ["Essentially fill-in-the-blanks.", "Sentences can originate from multiple paragraphs.", "Underline keywords & scan matching text.", "Complete with precise words."] },
+      { title: "7. Paragraph Location", order: "DO LAST", steps: ["Do last after seeing full passage.", "Underline keywords in question statement.", "Pay close attention to Topic Sentences.", "Locate specific information match."] },
+      { title: "8. Matching Person / Names", order: "NOT IN ORDER", steps: ["Note if names can be used more than once.", "Locate all name occurrences in passage.", "Do names appearing ONLY ONCE first.", "Match claims/statements to names."] },
+      { title: "9. Classification Questions", order: "PASSAGE 1/2", steps: ["Identify section sentence belongs to.", "Underline keywords in statements.", "Scan sections to verify true context.", "Categorize accordingly."] },
+      { title: "10. Headings Question", order: "TOPIC SENTENCE FOCUS", steps: ["Underline keywords in heading options.", "Start with shortest paragraphs.", "Read 1st & 2nd sentences (and last if stuck).", "Identify main/controlling idea."] },
+      { title: "11. Which Section Contains...?", order: "DO LAST (PASSAGE 3)", steps: ["Underline keywords prior to other set questions.", "Keep an eye out while answering other items.", "Rely on topic sentences for guidance."] },
+      { title: "12. Which Statements Mentioned?", order: "DO LAST", steps: ["Underline key terms in statement options upfront.", "Track locations while solving easier questions.", "Verify statements against text logic."] }
+    ];
+
+    // Render Reading Cards
+    const readingContainer = document.getElementById('reading-cards');
+    readingStrategies.forEach(item => {
+      const card = document.createElement('div');
+      card.className = "bg-white p-5 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition flex flex-col justify-between";
+      card.innerHTML = `
+        <div>
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="font-bold text-brandNavy text-sm">${item.title}</h3>
+            <span class="text-[10px] bg-brandBlue text-white px-2 py-0.5 rounded font-semibold">${item.order}</span>
+          </div>
+          <ol class="list-decimal ml-4 text-xs text-gray-600 space-y-1">
+            ${item.steps.map(s => `<li>${s}</li>`).join('')}
+          </ol>
+        </div>
+      `;
+      readingContainer.appendChild(card);
+    });
+
+    // Speaking Topics Data
+    const speakingTopics = [
+      "Travel & Holiday", "Friends", "Technology", "Food", "Sports", "Education", 
+      "Weather", "Music", "Environment", "Books & Films", "Accommodation", "Business", 
+      "Clothes & Fashion", "Health", "Holidays", "People - Character", "People - Appearance", 
+      "Relationships", "Shopping", "Towns & Cities", "Work", "Advertising"
+    ];
+
+    // Render Speaking Tags
+    const speakingContainer = document.getElementById('speaking-tags');
+    speakingTopics.forEach(topic => {
+      const tag = document.createElement('span');
+      tag.className = "bg-gray-100 border border-gray-200 text-brandNavy font-medium px-3 py-1 rounded-full";
+      tag.textContent = topic;
+      speakingContainer.appendChild(tag);
+    });
+
+    // Toggle Task 1 (GT vs Academic)
+    function toggleTask1(type) {
+      const gtBox = document.getElementById('task1-gt');
+      const acBox = document.getElementById('task1-ac');
+      const btnGt = document.getElementById('btn-gt');
+      const btnAc = document.getElementById('btn-ac');
+
+      if (type === 'gt') {
+        gtBox.classList.remove('hidden');
+        acBox.classList.add('hidden');
+        btnGt.className = "py-2 border-b-2 border-brandBlue text-brandBlue";
+        btnAc.className = "py-2 border-b-2 border-transparent text-gray-500 hover:text-brandNavy";
+      } else {
+        gtBox.classList.add('hidden');
+        acBox.classList.remove('hidden');
+        btnAc.className = "py-2 border-b-2 border-brandBlue text-brandBlue";
+        btnGt.className = "py-2 border-b-2 border-transparent text-gray-500 hover:text-brandNavy";
+      }
+    }
+
+    // Scroll helper
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
