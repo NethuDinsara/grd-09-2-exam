@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zen Student | Band 9 IELTS Master Dashboard</title>
+  <title>Zen Student | IELTS Band 9 Master Dashboard</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Inter & JetBrains Mono -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
@@ -21,283 +20,301 @@
             mono: ['JetBrains Mono', 'monospace'],
           },
           colors: {
-            brandDark: '#0B0F17',
-            brandCard: '#111827',
-            brandBorder: '#1F2937',
-            accentGold: '#F59E0B',
-            accentBlue: '#3B82F6',
-            accentCyan: '#06B6D4',
-            accentGreen: '#10B981',
-            accentPurple: '#8B5CF6'
+            brandBlue: '#1E40AF',
+            brandBlueLight: '#EFF6FF',
+            brandNavy: '#0F172A',
+            accentGold: '#D97706',
+            accentGoldLight: '#FEF3C7',
+            accentCyan: '#0284C7',
+            accentGreen: '#059669',
+            accentPurple: '#7C3AED'
           }
         }
       }
     }
   </script>
   <style>
-    /* Custom Scrollbar */
+    /* Custom Smooth Scrollbar */
     ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #0B0F17; }
-    ::-webkit-scrollbar-thumb { background: #1F2937; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #374151; }
+    ::-webkit-scrollbar-track { background: #F8FAFC; }
+    ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
   </style>
 </head>
-<body class="bg-brandDark text-gray-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-gray-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
 
   <!-- TOP NAVIGATION BAR -->
-  <nav class="sticky top-0 z-50 bg-brandDark/80 backdrop-blur-md border-b border-brandBorder">
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-accentGold to-amber-600 flex items-center justify-center text-brandDark shadow-lg shadow-amber-500/20">
+        <div class="flex items-center space-x-3 cursor-pointer group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brandBlue to-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300">
             <i class="fa-solid fa-graduation-cap text-xl font-black"></i>
           </div>
           <div>
-            <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">ZEN STUDENT</span>
-            <span class="block text-[10px] text-accentGold font-mono uppercase tracking-widest font-semibold">Band 9 Engine</span>
+            <span class="font-black text-lg tracking-tight text-slate-900 group-hover:text-brandBlue transition-colors">ZEN STUDENT</span>
+            <span class="block text-[10px] text-accentGold font-mono uppercase tracking-widest font-bold">Band 9 Engine</span>
           </div>
         </div>
 
         <!-- Quick Nav Links -->
-        <div class="hidden md:flex items-center space-x-1 text-xs font-semibold">
-          <button onclick="scrollToSection('reading')" class="px-3 py-2 rounded-lg hover:bg-brandBorder transition text-gray-300 hover:text-white"><i class="fa-solid fa-book-open text-accentBlue mr-1.5"></i> Reading</button>
-          <button onclick="scrollToSection('listening')" class="px-3 py-2 rounded-lg hover:bg-brandBorder transition text-gray-300 hover:text-white"><i class="fa-solid fa-headphones text-accentCyan mr-1.5"></i> Listening</button>
-          <button onclick="scrollToSection('writing')" class="px-3 py-2 rounded-lg hover:bg-brandBorder transition text-gray-300 hover:text-white"><i class="fa-solid fa-pen-nib text-accentGold mr-1.5"></i> Writing</button>
-          <button onclick="scrollToSection('speaking')" class="px-3 py-2 rounded-lg hover:bg-brandBorder transition text-gray-300 hover:text-white"><i class="fa-solid fa-comments text-accentPurple mr-1.5"></i> Speaking</button>
+        <div class="hidden md:flex items-center space-x-2 text-xs font-semibold">
+          <button onclick="scrollToSection('reading')" class="px-3 py-2 rounded-xl text-slate-600 hover:text-brandBlue hover:bg-blue-50 transition-all duration-200 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-brandBlue"></i> Reading</button>
+          <button onclick="scrollToSection('listening')" class="px-3 py-2 rounded-xl text-slate-600 hover:text-accentCyan hover:bg-sky-50 transition-all duration-200 flex items-center gap-1.5"><i class="fa-solid fa-headphones text-accentCyan"></i> Listening</button>
+          <button onclick="scrollToSection('writing')" class="px-3 py-2 rounded-xl text-slate-600 hover:text-accentGold hover:bg-amber-50 transition-all duration-200 flex items-center gap-1.5"><i class="fa-solid fa-pen-nib text-accentGold"></i> Writing</button>
+          <button onclick="scrollToSection('speaking')" class="px-3 py-2 rounded-xl text-slate-600 hover:text-accentPurple hover:bg-purple-50 transition-all duration-200 flex items-center gap-1.5"><i class="fa-solid fa-comments text-accentPurple"></i> Speaking</button>
         </div>
 
         <!-- Contact Tag -->
-        <div class="hidden sm:flex items-center space-x-3 text-xs border-l border-brandBorder pl-4 text-gray-400 font-mono">
-          <a href="https://wa.me/94717626701" target="_blank" class="hover:text-accentGreen transition flex items-center gap-1">
-            <i class="fa-brands fa-whatsapp text-accentGreen text-sm"></i> +94 71 762 6701
+        <div class="hidden sm:flex items-center space-x-3 text-xs border-l border-slate-200 pl-4 text-slate-500 font-mono">
+          <a href="https://wa.me/94717626701" target="_blank" class="hover:text-accentGreen transition-colors flex items-center gap-1.5 bg-emerald-50 text-accentGreen border border-emerald-200/60 px-3 py-1.5 rounded-xl font-bold hover:shadow-sm">
+            <i class="fa-brands fa-whatsapp text-sm"></i> +94 71 762 6701[cite: 1]
           </a>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- HERO SECTION WITH LIVE COUNTDOWN -->
-  <header class="relative overflow-hidden border-b border-brandBorder bg-gradient-to-b from-brandDark via-brandCard to-brandDark py-12 px-4">
+  <!-- HERO SECTION WITH COUNTDOWN -->
+  <header class="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-gray-50 py-12 px-4 border-b border-slate-200">
     <div class="max-w-7xl mx-auto text-center relative z-10">
       
       <!-- Target Badge -->
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-accentGold text-xs font-mono font-medium mb-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-accentGold text-xs font-mono font-bold mb-4 shadow-sm">
         <span class="w-2 h-2 rounded-full bg-accentGold animate-ping"></span>
         Target Date: September 21st, 2026
       </div>
 
-      <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-3">
-        Master IELTS <span class="bg-gradient-to-r from-accentGold via-amber-400 to-yellow-200 bg-clip-text text-transparent">General Band 9</span>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 mb-3">
+        Master IELTS <span class="bg-gradient-to-r from-brandBlue via-blue-600 to-accentCyan bg-clip-text text-transparent">General Band 9</span>
       </h1>
-      <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto mb-8">
-        An interactive blueprint for top-tier candidates. Complete strategies, structural breakdowns, and curriculum databases built from Zen Student archives.
+      <p class="text-slate-600 text-sm md:text-base max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+        Interactive study engine built for high-scoring candidates. Systematic breakdowns, strategy cards, and test databases structured from Zen Student material.
       </p>
 
       <!-- Countdown Timer Component -->
-      <div class="inline-grid grid-cols-4 gap-3 bg-brandDark/80 p-4 rounded-2xl border border-brandBorder shadow-2xl backdrop-blur-md mb-8">
-        <div class="px-3 py-2 bg-brandCard rounded-xl border border-brandBorder/50 min-w-[70px]">
-          <span id="cd-days" class="block font-mono text-2xl md:text-3xl font-black text-accentGold">00</span>
-          <span class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Days</span>
+      <div class="inline-grid grid-cols-4 gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 mb-4 transition-all hover:shadow-2xl hover:scale-[1.01]">
+        <div class="px-3.5 py-2.5 bg-slate-50 rounded-xl border border-slate-100 min-w-[75px]">
+          <span id="cd-days" class="block font-mono text-2xl md:text-3xl font-black text-brandBlue">00</span>
+          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Days</span>
         </div>
-        <div class="px-3 py-2 bg-brandCard rounded-xl border border-brandBorder/50 min-w-[70px]">
-          <span id="cd-hours" class="block font-mono text-2xl md:text-3xl font-black text-white">00</span>
-          <span class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Hours</span>
+        <div class="px-3.5 py-2.5 bg-slate-50 rounded-xl border border-slate-100 min-w-[75px]">
+          <span id="cd-hours" class="block font-mono text-2xl md:text-3xl font-black text-slate-800">00</span>
+          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Hours</span>
         </div>
-        <div class="px-3 py-2 bg-brandCard rounded-xl border border-brandBorder/50 min-w-[70px]">
-          <span id="cd-mins" class="block font-mono text-2xl md:text-3xl font-black text-white">00</span>
-          <span class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Mins</span>
+        <div class="px-3.5 py-2.5 bg-slate-50 rounded-xl border border-slate-100 min-w-[75px]">
+          <span id="cd-mins" class="block font-mono text-2xl md:text-3xl font-black text-slate-800">00</span>
+          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Mins</span>
         </div>
-        <div class="px-3 py-2 bg-brandCard rounded-xl border border-brandBorder/50 min-w-[70px]">
+        <div class="px-3.5 py-2.5 bg-slate-50 rounded-xl border border-slate-100 min-w-[75px]">
           <span id="cd-secs" class="block font-mono text-2xl md:text-3xl font-black text-accentCyan">00</span>
-          <span class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Secs</span>
+          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Secs</span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- DASHBOARD MAIN BODY -->
+  <!-- MAIN CONTENT CONTAINER -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16 flex-grow">
 
     <!-- 1. READING MODULE -->
     <section id="reading" class="scroll-mt-24 space-y-6">
-      <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-brandBorder pb-4 gap-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-200 pb-4 gap-4">
         <div>
           <div class="flex items-center gap-2">
-            <div class="w-3 h-3 rounded-full bg-accentBlue"></div>
-            <h2 class="text-2xl font-black tracking-tight text-white">Reading Strategy Engine</h2>
+            <div class="w-3 h-3 rounded-full bg-brandBlue"></div>
+            <h2 class="text-2xl font-black tracking-tight text-slate-900">Reading Strategy Engine</h2>
           </div>
-          <p class="text-xs text-gray-400 mt-1">40 Questions | 60 Mins | Master all 12 Documented Question Types</p>
+          <p class="text-xs text-slate-500 mt-1">40 Questions | 60 Mins | All 12 Question Types[cite: 1, 2]</p>
         </div>
         
-        <!-- Search Filter -->
+        <!-- Live Search -->
         <div class="relative">
-          <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-gray-500"></i>
-          <input type="text" id="reading-search" onkeyup="filterReading()" placeholder="Search question types..." class="bg-brandCard border border-brandBorder rounded-xl pl-9 pr-4 py-1.5 text-xs text-white focus:outline-none focus:border-accentBlue w-full md:w-64 transition">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-xs text-slate-400"></i>
+          <input type="text" id="reading-search" onkeyup="filterReading()" placeholder="Search question types..." class="bg-white border border-slate-200 rounded-xl pl-9 pr-4 py-2 text-xs text-slate-800 focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-blue-100 w-full md:w-64 transition-all shadow-sm">
         </div>
       </div>
 
       <!-- Golden Rule Banner -->
-      <div class="bg-gradient-to-r from-blue-950/40 via-brandCard to-brandCard border border-accentBlue/30 rounded-2xl p-5 shadow-lg flex items-start gap-4">
-        <div class="p-3 bg-accentBlue/10 text-accentBlue rounded-xl text-lg hidden sm:block">
+      <div class="bg-gradient-to-r from-blue-50/80 via-white to-white border border-blue-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+        <div class="p-3 bg-brandBlue text-white rounded-xl text-lg hidden sm:block shadow-md shadow-blue-500/20">
           <i class="fa-solid fa-compass"></i>
         </div>
-        <div class="text-xs text-gray-300 space-y-1">
-          <h4 class="font-bold text-white text-sm flex items-center gap-2">
-            <i class="fa-solid fa-compass text-accentBlue sm:hidden"></i> Master Logic Rules
+        <div class="text-xs text-slate-600 space-y-1">
+          <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+            <i class="fa-solid fa-compass text-brandBlue sm:hidden"></i> Master Logic Rules[cite: 2]
           </h4>
-          <p>Questions generally follow paragraph order. Always compare the <b>Question to the Passage</b>, NOT the passage to the question[cite: 2]. Keep an active eye out for synonym language and compound sentence structures (e.g., semicolons `;`)[cite: 2].</p>
+          <p class="leading-relaxed">In-order questions generally follow paragraph flow[cite: 2]. Always compare the <b>Question to the Passage</b>, NOT the passage to the question[cite: 2]. Actively map synonyms and watch for complex compound sentences (e.g., semicolons `;`)[cite: 2].</p>
         </div>
       </div>
 
       <!-- Interactive Reading Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="reading-grid">
-        <!-- Rendered dynamically -->
+        <!-- Dynamically rendered -->
       </div>
     </section>
 
     <!-- 2. LISTENING MODULE -->
     <section id="listening" class="scroll-mt-24 space-y-6">
-      <div class="border-b border-brandBorder pb-4">
+      <div class="border-b border-slate-200 pb-4">
         <div class="flex items-center gap-2">
           <div class="w-3 h-3 rounded-full bg-accentCyan"></div>
-          <h2 class="text-2xl font-black tracking-tight text-white">Listening Precision Framework</h2>
+          <h2 class="text-2xl font-black tracking-tight text-slate-900">Listening Precision Framework</h2>
         </div>
-        <p class="text-xs text-gray-400 mt-1">4 Audio Sections | 40 Questions | Band 9 requires 39-40 correct answers</p>
+        <p class="text-xs text-slate-500 mt-1">4 Audio Sections | 40 Questions[cite: 1] | Target 39–40/40 for Band 9</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl hover:border-accentCyan/50 transition">
-          <div class="w-10 h-10 rounded-xl bg-accentCyan/10 text-accentCyan flex items-center justify-center font-bold text-lg mb-3">
+        <div class="bg-white border border-slate-200 p-5 rounded-2xl hover:border-accentCyan hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-sky-50 text-accentCyan flex items-center justify-center font-bold text-lg mb-3 group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-crosshair"></i>
           </div>
-          <h3 class="font-bold text-white text-sm mb-1">1. Active Word Prediction</h3>
-          <p class="text-xs text-gray-400">Before audio plays, pre-analyze blanks. Predict required parts of speech (noun, verb, adjective) and exact units (date, price, quantity).</p>
+          <h3 class="font-bold text-slate-900 text-sm mb-1 group-hover:text-accentCyan transition-colors">1. Active Word Prediction</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">Pre-analyze blank spaces during audio prep time. Predict precise parts of speech (noun, verb, adjective) and expected categories (dates, quantities, prices).</p>
         </div>
 
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl hover:border-accentCyan/50 transition">
-          <div class="w-10 h-10 rounded-xl bg-accentCyan/10 text-accentCyan flex items-center justify-center font-bold text-lg mb-3">
+        <div class="bg-white border border-slate-200 p-5 rounded-2xl hover:border-accentCyan hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-sky-50 text-accentCyan flex items-center justify-center font-bold text-lg mb-3 group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-shield-halved"></i>
           </div>
-          <h3 class="font-bold text-white text-sm mb-1">2. Distractor Traps</h3>
-          <p class="text-xs text-gray-400">Speakers often correct themselves mid-sentence ("<i>We will meet on Tuesday... wait, no, Thursday</i>"). Never write the first answer you hear.</p>
+          <h3 class="font-bold text-slate-900 text-sm mb-1 group-hover:text-accentCyan transition-colors">2. Distractor Traps</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">Speakers frequently correct themselves mid-phrase ("<i>We'll begin on Tuesday... actually, let's make it Thursday</i>"). Never record the first data point heard.</p>
         </div>
 
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl hover:border-accentCyan/50 transition">
-          <div class="w-10 h-10 rounded-xl bg-accentCyan/10 text-accentCyan flex items-center justify-center font-bold text-lg mb-3">
+        <div class="bg-white border border-slate-200 p-5 rounded-2xl hover:border-accentCyan hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-sky-50 text-accentCyan flex items-center justify-center font-bold text-lg mb-3 group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-spell-check"></i>
           </div>
-          <h3 class="font-bold text-white text-sm mb-1">3. Plural & Spelling Precision</h3>
-          <p class="text-xs text-gray-400">Missing a final "-s" instantly invalidates the response. Verify exact singular vs plural logic and double-check standard British/American spelling.</p>
+          <h3 class="font-bold text-slate-900 text-sm mb-1 group-hover:text-accentCyan transition-colors">3. Plural & Spelling Accuracy</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">A missing singular/plural noun suffix (-s) causes immediate mark loss. Double-check exact word limits and standard spelling conventions.</p>
         </div>
       </div>
     </section>
 
     <!-- 3. WRITING MODULE -->
     <section id="writing" class="scroll-mt-24 space-y-6">
-      <div class="border-b border-brandBorder pb-4">
+      <div class="border-b border-slate-200 pb-4">
         <div class="flex items-center gap-2">
           <div class="w-3 h-3 rounded-full bg-accentGold"></div>
-          <h2 class="text-2xl font-black tracking-tight text-white">Writing Blueprint (Task 1 & Task 2)</h2>
+          <h2 class="text-2xl font-black tracking-tight text-slate-900">Writing Blueprint (Task 1 & Task 2)</h2>
         </div>
-        <p class="text-xs text-gray-400 mt-1">2 Tasks | 60 Minutes Total | General Training & Academic Specs</p>
+        <p class="text-xs text-slate-500 mt-1">2 Tasks | 60 Minutes Total[cite: 1] | General Training & Academic Specifications[cite: 1]</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         
-        <!-- Task 1 Card with Interactive Mode Switch -->
-        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-4">
-          <div class="flex justify-between items-center border-b border-brandBorder pb-3">
+        <!-- Task 1 Card with Mode Switcher -->
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+          <div class="flex justify-between items-center border-b border-slate-100 pb-3">
             <div>
               <span class="text-[10px] text-accentGold font-mono font-bold uppercase tracking-widest">Weight: 1/3</span>
-              <h3 class="text-lg font-extrabold text-white">Task 1 Breakdown</h3>
+              <h3 class="text-lg font-extrabold text-slate-900">Task 1 Blueprint[cite: 1]</h3>
             </div>
             
             <!-- Switch Tabs -->
-            <div class="bg-brandDark p-1 rounded-xl border border-brandBorder flex text-xs font-semibold">
-              <button onclick="setTask1Mode('gt')" id="tab-gt" class="px-3 py-1 rounded-lg bg-accentGold text-brandDark font-bold transition">GT Letters</button>
-              <button onclick="setTask1Mode('ac')" id="tab-ac" class="px-3 py-1 rounded-lg text-gray-400 hover:text-white transition">Academic</button>
+            <div class="bg-slate-100 p-1 rounded-xl border border-slate-200 flex text-xs font-semibold">
+              <button onclick="setTask1Mode('gt')" id="tab-gt" class="px-3 py-1 rounded-lg bg-accentGold text-white font-bold transition-all shadow-sm">GT Letters</button>
+              <button onclick="setTask1Mode('ac')" id="tab-ac" class="px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition-all">Academic[cite: 1]</button>
             </div>
           </div>
 
           <!-- Task 1 GT View -->
           <div id="view-gt" class="space-y-3 text-xs">
-            <p class="text-gray-300"><b>Goal:</b> Draft a 150+ word letter addressing 3 bullet points with consistent tone.</p>
+            <p class="text-slate-600"><b>Goal:</b> Draft a 150+ word letter responding to 3 prompts with appropriate tone[cite: 1].</p>
             <div class="space-y-2">
-              <div class="bg-brandDark p-3 rounded-xl border border-brandBorder">
-                <span class="text-accentGold font-bold">Formal Tone:</span> Unregistered recipients (Manager, Bank).
-                <div class="text-[11px] text-gray-400 mt-1">"<i>Dear Sir/Madam ... Yours faithfully</i>" (Zero contractions).</div>
+              <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80 hover:border-amber-300 transition-colors">
+                <span class="text-accentGold font-bold">Formal Tone:</span> Unregistered recipients (Manager, Organization).
+                <div class="text-[11px] text-slate-500 mt-1">"<i>Dear Sir/Madam ... Yours faithfully</i>" (No contractions allowed).</div>
               </div>
-              <div class="bg-brandDark p-3 rounded-xl border border-brandBorder">
-                <span class="text-accentBlue font-bold">Semi-Formal Tone:</span> Known figure/professional relation (Landlord, Teacher).
-                <div class="text-[11px] text-gray-400 mt-1">"<i>Dear Mr. Davis ... Yours sincerely</i>"</div>
+              <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80 hover:border-blue-300 transition-colors">
+                <span class="text-brandBlue font-bold">Semi-Formal Tone:</span> Professional relation (Landlord, Instructor).
+                <div class="text-[11px] text-slate-500 mt-1">"<i>Dear Mr. Davis ... Yours sincerely</i>"</div>
               </div>
-              <div class="bg-brandDark p-3 rounded-xl border border-brandBorder">
-                <span class="text-accentGreen font-bold">Informal Tone:</span> Personal friends/family.
-                <div class="text-[11px] text-gray-400 mt-1">"<i>Dear Sam ... Warm regards</i>" (Natural contractions allowed).</div>
+              <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80 hover:border-emerald-300 transition-colors">
+                <span class="text-accentGreen font-bold">Informal Tone:</span> Personal friends or family.
+                <div class="text-[11px] text-slate-500 mt-1">"<i>Dear Alex ... Warm regards</i>" (Natural contractions allowed).</div>
               </div>
             </div>
           </div>
 
           <!-- Task 1 Academic View -->
           <div id="view-ac" class="space-y-3 text-xs hidden">
-            <p class="text-gray-300"><b>Supported Visual Data Types:</b></p>
-            <div class="grid grid-cols-2 gap-2 text-gray-400 font-mono text-[11px]">
-              <span class="p-2 bg-brandDark rounded-lg border border-brandBorder">1. Bar Charts[cite: 1]</span>
-              <span class="p-2 bg-brandDark rounded-lg border border-brandBorder">2. Pie Charts[cite: 1]</span>
-              <span class="p-2 bg-brandDark rounded-lg border border-brandBorder">3. Line Graphs[cite: 1]</span>
-              <span class="p-2 bg-brandDark rounded-lg border border-brandBorder">4. Maps[cite: 1]</span>
-              <span class="p-2 bg-brandDark rounded-lg border border-brandBorder">5. Process Diagrams[cite: 1]</span>
-              <span class="p-2 bg-brandDark rounded-lg border border-brandBorder">6. Multiple Graphs[cite: 1]</span>
+            <p class="text-slate-600"><b>Supported Visual Data Types:</b>[cite: 1]</p>
+            <div class="grid grid-cols-2 gap-2 text-slate-700 font-mono text-[11px]">
+              <span class="p-2 bg-slate-50 rounded-lg border border-slate-200">1. Bar Charts[cite: 1]</span>
+              <span class="p-2 bg-slate-50 rounded-lg border border-slate-200">2. Pie Charts[cite: 1]</span>
+              <span class="p-2 bg-slate-50 rounded-lg border border-slate-200">3. Line Graphs[cite: 1]</span>
+              <span class="p-2 bg-slate-50 rounded-lg border border-slate-200">4. Maps[cite: 1]</span>
+              <span class="p-2 bg-slate-50 rounded-lg border border-slate-200">5. Process Diagrams[cite: 1]</span>
+              <span class="p-2 bg-slate-50 rounded-lg border border-slate-200">6. Multiple Graphs[cite: 1]</span>
             </div>
           </div>
         </div>
 
         <!-- Task 2 Card with Accordion Database -->
-        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-4">
-          <div class="flex justify-between items-center border-b border-brandBorder pb-3">
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+          <div class="flex justify-between items-center border-b border-slate-100 pb-3">
             <div>
               <span class="text-[10px] text-accentGold font-mono font-bold uppercase tracking-widest">Weight: 2/3</span>
-              <h3 class="text-lg font-extrabold text-white">Task 2 Essay Matrix</h3>
+              <h3 class="text-lg font-extrabold text-slate-900">Task 2 Essay Matrix[cite: 1]</h3>
             </div>
-            <span class="text-xs bg-amber-500/10 border border-amber-500/20 text-accentGold px-2.5 py-1 rounded-full font-mono">250+ Words[cite: 1]</span>
+            <span class="text-xs bg-amber-50 border border-amber-200 text-accentGold px-2.5 py-1 rounded-full font-mono font-bold">250+ Words[cite: 1]</span>
           </div>
 
           <!-- Essay Types Accordion -->
-          <details class="group bg-brandDark rounded-xl border border-brandBorder text-xs transition">
-            <summary class="p-3 font-bold text-white cursor-pointer flex justify-between items-center">
+          <details class="group bg-slate-50 rounded-xl border border-slate-200 text-xs transition-all">
+            <summary class="p-3.5 font-bold text-slate-900 cursor-pointer flex justify-between items-center hover:bg-slate-100/80 rounded-xl transition-colors">
               <span><i class="fa-solid fa-list-check text-accentGold mr-2"></i> 9 Essay Types Database[cite: 1]</span>
-              <i class="fa-solid fa-chevron-down group-open:rotate-180 transition text-gray-500"></i>
+              <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform text-slate-400"></i>
             </summary>
-            <div class="p-3 pt-0 border-t border-brandBorder/50 grid grid-cols-1 md:grid-cols-2 gap-1.5 text-gray-400 mt-2">
-              <span>1. Agree / Disagree[cite: 1]</span>
-              <span>2. Extent Agree/Disagree[cite: 1]</span>
-              <span>3. Advantages/Disadvantages[cite: 1]</span>
-              <span>4. Problem / Solution[cite: 1]</span>
-              <span>5. Cause / Solution[cite: 1]</span>
-              <span>6. Cause / Effect[cite: 1]</span>
-              <span>7. Discuss Both Views[cite: 1]</span>
-              <span>8. Opinion + Support[cite: 1]</span>
-              <span class="col-span-2">9. Double-Question Essays[cite: 1]</span>
+            <div class="p-3.5 pt-0 border-t border-slate-200/60 grid grid-cols-1 md:grid-cols-2 gap-2 text-slate-600 mt-2">
+              <span class="p-1.5 bg-white rounded border border-slate-200/60">1. Agree / Disagree[cite: 1]</span>
+              <span class="p-1.5 bg-white rounded border border-slate-200/60">2. Extent Agree/Disagree[cite: 1]</span>
+              <span class="p-1.5 bg-white rounded border border-slate-200/60">3. Advantages/Disadvantages[cite: 1]</span>
+              <span class="p-1.5 bg-white rounded border border-slate-200/60">4. Problem / Solution[cite: 1]</span>
+              <span class="p-1.5 bg-white rounded border border-slate-200/60">5. Cause / Solution[cite: 1]</span>
+              <span class="p-1.5 bg-white rounded border border-slate-200/60">6. Cause / Effect[cite: 1]</span>
+              <span class="p-1.5 bg-white rounded border border-slate-200/60">7. Discuss Both Views[cite: 1]</span>
+              <span class="p-1.5 bg-white rounded border border-slate-200/60">8. Opinion + Support[cite: 1]</span>
+              <span class="p-1.5 bg-white rounded border border-slate-200/60 col-span-2">9. Double-Question Essays[cite: 1]</span>
             </div>
           </details>
 
           <!-- Essay Topics Accordion -->
-          <details class="group bg-brandDark rounded-xl border border-brandBorder text-xs transition">
-            <summary class="p-3 font-bold text-white cursor-pointer flex justify-between items-center">
-              <span><i class="fa-solid fa-folder-open text-accentBlue mr-2"></i> 29 Master Topic Areas</span>
-              <i class="fa-solid fa-chevron-down group-open:rotate-180 transition text-gray-500"></i>
+          <details class="group bg-slate-50 rounded-xl border border-slate-200 text-xs transition-all">
+            <summary class="p-3.5 font-bold text-slate-900 cursor-pointer flex justify-between items-center hover:bg-slate-100/80 rounded-xl transition-colors">
+              <span><i class="fa-solid fa-folder-open text-brandBlue mr-2"></i> 29 Master Topic Areas[cite: 1, 2]</span>
+              <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform text-slate-400"></i>
             </summary>
-            <div class="p-3 pt-0 border-t border-brandBorder/50 grid grid-cols-3 gap-1 text-[10px] text-gray-400 font-mono mt-2">
-              <span>Education[cite: 1]</span><span>Environment[cite: 1]</span><span>Science/Tech[cite: 1]</span>
-              <span>Media[cite: 1]</span><span>Advertising[cite: 1]</span><span>Children[cite: 1]</span>
-              <span>Young People[cite: 1]</span><span>Old People[cite: 1]</span><span>Buildings[cite: 1]</span>
-              <span>Culture[cite: 1]</span><span>Ethical[cite: 1]</span><span>Family[cite: 1]</span>
-              <span>Languages[cite: 1]</span><span>Health[cite: 1]</span><span>Lifestyle[cite: 1]</span>
-              <span>Research[cite: 1]</span><span>Sports[cite: 1]</span><span>Social[cite: 1]</span>
-              <span>Computers[cite: 1]</span><span>Economy[cite: 1]</span><span>Government[cite: 1]</span>
-              <span>Jobs[cite: 1]</span><span>Leisure[cite: 1]</span><span>Traffic[cite: 1]</span>
-              <span>Travel[cite: 1]</span><span>Values[cite: 1]</span><span>Hometown[cite: 1, 2]</span>
+            <div class="p-3.5 pt-0 border-t border-slate-200/60 grid grid-cols-3 gap-1.5 text-[10px] text-slate-600 font-mono mt-2">
+              <span class="bg-white p-1 rounded border border-slate-200/60">Education[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Environment[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Science/Tech[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Media[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Advertising[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Children[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Young People[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Old People[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Buildings[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Culture[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Ethical[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Family[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Languages[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Health[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Lifestyle[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Research[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Sports[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Social[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Computers[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Economy[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Government[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Jobs[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Leisure[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Traffic[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Travel[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60">Values[cite: 1]</span>
+              <span class="bg-white p-1 rounded border border-slate-200/60 col-span-2">Hometown[cite: 1, 2]</span>
             </div>
           </details>
         </div>
@@ -307,38 +324,38 @@
 
     <!-- 4. SPEAKING MODULE -->
     <section id="speaking" class="scroll-mt-24 space-y-6">
-      <div class="border-b border-brandBorder pb-4">
+      <div class="border-b border-slate-200 pb-4">
         <div class="flex items-center gap-2">
           <div class="w-3 h-3 rounded-full bg-accentPurple"></div>
-          <h2 class="text-2xl font-black tracking-tight text-white">Speaking Mastery Engine</h2>
+          <h2 class="text-2xl font-black tracking-tight text-slate-900">Speaking Mastery Engine</h2>
         </div>
-        <p class="text-xs text-gray-400 mt-1">10–20 Minutes Conversation with Examiner[cite: 1] | 22 Core Subject Areas[cite: 1, 2]</p>
+        <p class="text-xs text-slate-500 mt-1">10–20 Minutes Exam Conversation[cite: 1] | 22 Core Subject Areas[cite: 1, 2]</p>
       </div>
 
-      <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-6">
-        <!-- 3 Part Cards -->
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-6">
+        <!-- 3 Parts Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-          <div class="p-4 bg-brandDark rounded-xl border border-brandBorder space-y-1">
-            <span class="text-accentPurple font-bold">Part 1: Interview</span>
-            <p class="text-gray-400">Provide direct answers followed by 1-2 detailed supporting clauses.</p>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-purple-300 transition-colors space-y-1">
+            <span class="text-accentPurple font-bold">Part 1: Interview[cite: 1]</span>
+            <p class="text-slate-600 leading-relaxed">Direct responses supplemented with 1–2 supporting clauses.</p>
           </div>
-          <div class="p-4 bg-brandDark rounded-xl border border-brandBorder space-y-1">
-            <span class="text-accentPurple font-bold">Part 2: Long Turn</span>
-            <p class="text-gray-400">1-min preparation time, 2-min continuous talk. Outline a complete narrative arc.</p>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-purple-300 transition-colors space-y-1">
+            <span class="text-accentPurple font-bold">Part 2: Long Turn[cite: 1]</span>
+            <p class="text-slate-600 leading-relaxed">1-minute preparation, 2-minute speech. Build a structured narrative arc.</p>
           </div>
-          <div class="p-4 bg-brandDark rounded-xl border border-brandBorder space-y-1">
-            <span class="text-accentPurple font-bold">Part 3: Discussion</span>
-            <p class="text-gray-400">Abstract, societal perspective. Demonstrate advanced discourse markers.</p>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-purple-300 transition-colors space-y-1">
+            <span class="text-accentPurple font-bold">Part 3: Discussion[cite: 1]</span>
+            <p class="text-slate-600 leading-relaxed">Broad, societal evaluation using advanced academic discourse markers.</p>
           </div>
         </div>
 
         <!-- Interactive Filter Tags for 22 Topics -->
         <div>
-          <h4 class="text-xs font-bold text-gray-300 mb-3 flex items-center gap-2">
+          <h4 class="text-xs font-bold text-slate-700 mb-3 flex items-center gap-2">
             <i class="fa-solid fa-tags text-accentPurple"></i> Documented Topic Framework (22 Areas):[cite: 1, 2]
           </h4>
           <div class="flex flex-wrap gap-2 text-xs" id="speaking-tags-container">
-            <!-- Rendered dynamically -->
+            <!-- Dynamically rendered -->
           </div>
         </div>
       </div>
@@ -347,15 +364,15 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-brandBorder bg-brandDark py-8 text-center text-xs text-gray-500">
+  <footer class="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 space-y-2">
-      <div class="flex justify-center items-center space-x-2 text-white font-bold">
+      <div class="flex justify-center items-center space-x-2 text-slate-900 font-bold">
         <span>ZEN STUDENT</span>
         <span>•</span>
         <span class="text-accentGold">Band 9 Master Engine</span>
       </div>
       <p>Email: zenstudentlk@gmail.com | WhatsApp: +94 71 762 6701[cite: 1]</p>
-      <p>© 2026 Zen Student IELTS Preparation[cite: 1]. Built for Band 9 Excellence.</p>
+      <p>© 2026 Zen Student IELTS Preparation[cite: 1]. All rights reserved.</p>
     </div>
   </footer>
 
@@ -385,18 +402,18 @@
 
     // 2. Reading Data Array[cite: 2]
     const readingData = [
-      { id: "rc-1", name: "1. Sentence Completion", tag: "IN ORDER", steps: ["Locate easiest question.", "Underline key terms.", "Scan sentence language surrounding the blank space.", "Verify exact words."] },
-      { id: "rc-2", name: "2. Short-Answer Questions", tag: "IN ORDER", steps: ["Locate easiest question.", "Underline keywords.", "Scan text for matching answer sentence.", "Observe word limit limits."] },
-      { id: "rc-3", name: "3. Flowcharts & Tables", tag: "IN ORDER", steps: ["Spot easiest gap to fill.", "Underline key terms.", "Match context language preceding/following blank.", "Write answer."] },
-      { id: "rc-4", name: "4. Multiple Choice", tag: "IN ORDER", steps: ["Underline key terms.", "Locate text passage matching statement.", "Option can span up to 2 sentences.", "Compare options to text."] },
-      { id: "rc-5", name: "5. True / False / Not Given", tag: "IN ORDER", steps: ["True: All essential info matches.", "False: Essential info contradicted or opposite.", "Not Given: Info missing or unproven."] },
-      { id: "rc-6", name: "6. Summary Completion", tag: "MOSTLY IN ORDER", steps: ["Fill-in-blank variant.", "Sentences can come from multiple paragraphs.", "Scan keywords.", "Extract exact text terms."] },
-      { id: "rc-7", name: "7. Paragraph Location", tag: "DO LAST", steps: ["Complete last in question set.", "Underline statement keywords.", "Examine topic sentences closely.", "Locate precise detail match."] },
-      { id: "rc-8", name: "8. Matching Person / Names", tag: "NOT IN ORDER", steps: ["Check if names can be reused.", "Locate all name occurrences in text.", "Address names appearing ONLY ONCE first.", "Match claim to person."] },
-      { id: "rc-9", name: "9. Classification Questions", tag: "PASSAGE 1/2", steps: ["Identify section matching context.", "Underline keywords.", "Scan sections to confirm context.", "Categorize statements."] },
-      { id: "rc-10", name: "10. Headings Questions", tag: "TOPIC SENTENCE", steps: ["Underline heading keywords.", "Begin with shortest paragraphs.", "Read 1st, 2nd, and last sentences.", "Capture main controlling idea."] },
-      { id: "rc-11", name: "11. Which Section Contains...?", tag: "DO LAST", steps: ["Underline keywords prior to set.", "Keep eye open while completing easier questions.", "Rely on topic sentence cues."] },
-      { id: "rc-12", name: "12. Statements Mentioned?", tag: "DO LAST", steps: ["Underline options in advance.", "Track keywords while tackling other items.", "Verify statement presence."] }
+      { id: "rc-1", name: "1. Sentence Completion", tag: "IN ORDER", steps: ["Locate easiest question.", "Underline keywords.", "Scan text before/after blank.", "Verify exact language."] },
+      { id: "rc-2", name: "2. Short-Answer Questions", tag: "IN ORDER", steps: ["Spot easiest question first.", "Underline key phrases.", "Locate matching passage sentence.", "Respect word limits."] },
+      { id: "rc-3", name: "3. Flowcharts & Tables", tag: "IN ORDER", steps: ["Find easiest blank.", "Underline keywords.", "Match context surrounding blank.", "Write accurate response."] },
+      { id: "rc-4", name: "4. Multiple Choice", tag: "IN ORDER", steps: ["Underline stem keywords.", "Scan passage (can span 2 lines).", "Compare options against passage logic.", "Select answer."] },
+      { id: "rc-5", name: "5. True / False / Not Given", tag: "IN ORDER", steps: ["True: All essential info matches.", "False: Info is opposite or contradicted.", "Not Given: Info unproven."] },
+      { id: "rc-6", name: "6. Summary Completion", tag: "MOSTLY IN ORDER", steps: ["Fill-in-the-blank format.", "Passage text may span multiple paragraphs.", "Match keywords.", "Extract exact terms."] },
+      { id: "rc-7", name: "7. Paragraph Location", tag: "DO LAST", steps: ["Solve last in set.", "Underline statement keywords.", "Evaluate topic sentences.", "Locate exact information."] },
+      { id: "rc-8", name: "8. Matching Person / Names", tag: "NOT IN ORDER", steps: ["Check if names can be reused.", "Locate all name instances in passage.", "Solve names appearing ONCE first.", "Match statement to person."] },
+      { id: "rc-9", name: "9. Classification Questions", tag: "PASSAGE 1/2", steps: ["Identify matching section.", "Underline keywords.", "Verify context in text.", "Categorize statement."] },
+      { id: "rc-10", name: "10. Headings Questions", tag: "TOPIC SENTENCE", steps: ["Underline heading options.", "Start with shortest paragraphs.", "Read 1st, 2nd, and last sentence.", "Determine controlling idea."] },
+      { id: "rc-11", name: "11. Which Section Contains...?", tag: "DO LAST", steps: ["Underline keywords upfront.", "Keep an eye out while doing other items.", "Use topic sentences as guides."] },
+      { id: "rc-12", name: "12. Statements Mentioned?", tag: "DO LAST", steps: ["Underline options in advance.", "Track keywords while solving easier items.", "Confirm statement match."] }
     ];
 
     // Render Reading Grid
@@ -405,14 +422,14 @@
       readingGrid.innerHTML = '';
       cards.forEach(item => {
         const div = document.createElement('div');
-        div.className = "bg-brandCard border border-brandBorder p-5 rounded-2xl flex flex-col justify-between hover:border-accentBlue/50 transition group";
+        div.className = "bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandBlue hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group";
         div.innerHTML = `
           <div>
             <div class="flex items-center justify-between mb-3">
-              <h4 class="font-bold text-white text-xs group-hover:text-accentBlue transition">${item.name}</h4>
-              <span class="text-[9px] font-mono bg-brandDark text-accentBlue border border-accentBlue/20 px-2 py-0.5 rounded-full font-bold">${item.tag}</span>
+              <h4 class="font-bold text-slate-900 text-xs group-hover:text-brandBlue transition-colors">${item.name}</h4>
+              <span class="text-[9px] font-mono bg-blue-50 text-brandBlue border border-blue-200 px-2 py-0.5 rounded-full font-bold">${item.tag}</span>
             </div>
-            <ol class="list-decimal ml-4 text-[11px] text-gray-400 space-y-1">
+            <ol class="list-decimal ml-4 text-[11px] text-slate-500 space-y-1">
               ${item.steps.map(s => `<li>${s}</li>`).join('')}
             </ol>
           </div>
@@ -439,13 +456,13 @@
       if (mode === 'gt') {
         viewGt.classList.remove('hidden');
         viewAc.classList.add('hidden');
-        tabGt.className = "px-3 py-1 rounded-lg bg-accentGold text-brandDark font-bold transition";
-        tabAc.className = "px-3 py-1 rounded-lg text-gray-400 hover:text-white transition";
+        tabGt.className = "px-3 py-1 rounded-lg bg-accentGold text-white font-bold transition-all shadow-sm";
+        tabAc.className = "px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition-all";
       } else {
         viewGt.classList.add('hidden');
         viewAc.classList.remove('hidden');
-        tabAc.className = "px-3 py-1 rounded-lg bg-accentGold text-brandDark font-bold transition";
-        tabGt.className = "px-3 py-1 rounded-lg text-gray-400 hover:text-white transition";
+        tabAc.className = "px-3 py-1 rounded-lg bg-accentGold text-white font-bold transition-all shadow-sm";
+        tabGt.className = "px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition-all";
       }
     }
 
@@ -460,7 +477,7 @@
     const speakingContainer = document.getElementById('speaking-tags-container');
     speakingTopics.forEach(topic => {
       const span = document.createElement('span');
-      span.className = "bg-brandDark border border-brandBorder hover:border-accentPurple/50 text-gray-300 font-mono text-[11px] px-3 py-1 rounded-xl transition cursor-default";
+      span.className = "bg-slate-50 border border-slate-200 hover:border-accentPurple hover:bg-purple-50 hover:text-accentPurple text-slate-600 font-mono text-[11px] px-3 py-1.5 rounded-xl transition-all cursor-default shadow-2xs";
       span.textContent = topic;
       speakingContainer.appendChild(span);
     });
